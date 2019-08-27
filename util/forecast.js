@@ -15,7 +15,7 @@ const forecast = (location, latitude, longitude, callback) => {
                 error: body.error
             })
         }else{
-            const reply = location + " is " + body.currently.summary + " at " + body.currently.temperature + " degrees with " + body.currently.precipProbability + "% of rain."
+            const reply = location + " is " + body.currently.summary + " at " + body.currently.temperature + " degrees with " + body.currently.precipProbability + "% of rain with wind speed " + body.currently.windSpeed;
             callback(undefined, {
                 location: location,
                 forecast: reply
